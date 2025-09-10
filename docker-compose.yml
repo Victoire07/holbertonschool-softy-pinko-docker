@@ -5,6 +5,10 @@ context: ./back-end
 dockerfile: back-end/Dockerfile
 image: softy-pinko-back-end:task4
 ports: 5252:5252
-
 front-end:
+build: ./front-end
+context:  front-end/Dockerfile
+image: softy-pinko-front-end:task4
+ports: 9000:9000
+depends_on: back-end
 
